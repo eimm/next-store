@@ -1,5 +1,5 @@
 import { Product } from "@/models";
-import { getProductsUrl, ProductsQuery } from "@/lib/paths";
+import { getProductsUrl, ProductsQuery, getProductUrl } from "@/lib/paths";
 
 export const getProducts = async (q: ProductsQuery): Promise<Product[]> => {
   const res = await fetch(getProductsUrl(q));
@@ -7,8 +7,8 @@ export const getProducts = async (q: ProductsQuery): Promise<Product[]> => {
   return res.json();
 };
 
-// export const getProduct = async (id: string): Promise<Product> => {
-//   const res = await fetch(getBillboardUrl(id));
+export const getProduct = async (id: string): Promise<Product> => {
+  const res = await fetch(getProductUrl(id));
 
-//   return res.json();
-// };
+  return res.json();
+};

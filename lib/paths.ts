@@ -1,12 +1,17 @@
-import { url } from "inspector";
 import queryString from "query-string";
 
 export const baseUrl = process.env.NEXT_PUBLIC_API_URL;
-export const categoriesUrl = `${baseUrl}/categories`;
-export const billboardsUrl = `${baseUrl}/billboards`;
-export const productsUrl = `${baseUrl}/products`;
+const getPathUrl = (path: string) => `${baseUrl}/${path}`;
+const getUrlWithID = (path: string) => (id: string) => `${path}/${id}`;
+export const categoriesUrl = getPathUrl("categories");
+export const billboardsUrl = getPathUrl("billboards");
+export const productsUrl = getPathUrl("products");
+export const variantsUrl = getPathUrl("variants");
+export const coloursUrl = getPathUrl("colours");
 
-export const getBillboardUrl = (id: string) => `${billboardsUrl}/${id}`;
+export const getBillboardUrl = getUrlWithID(billboardsUrl);
+export const getCategoryUrl = getUrlWithID(categoriesUrl);
+export const getProductUrl = getUrlWithID(productsUrl);
 
 export interface ProductsQuery {
   categoryId?: string;
@@ -24,5 +29,3 @@ export const getProductsUrl = (q: ProductsQuery) =>
       isFeatured: q.isFeatured,
     },
   });
-
-export const getProductUrl = (id: string) => `${productsUrl}/${id}`;

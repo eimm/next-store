@@ -1,5 +1,4 @@
-import { getProduct } from "@/actions/Product";
-import { getProducts } from "@/actions/Products";
+import { getProducts, getProduct } from "@/actions/Products";
 import Gallery from "@/components/Gallery";
 import Info from "@/components/Info";
 import Products from "@/components/Products";
