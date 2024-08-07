@@ -24,3 +24,5 @@ export const getProductsUrl = (q: ProductsQuery) =>
       isFeatured: q.isFeatured,
     },
   });
+
+export const getProductUrl = (id: string) => `${productsUrl}/${id}`;
