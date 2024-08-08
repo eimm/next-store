@@ -2,11 +2,12 @@
 
 import { Product } from "@/models";
 import Image from "next/image";
-import React, { FC } from "react";
+import React, { FC, MouseEventHandler } from "react";
 import ButtonIcon from "./ButtonIcon";
 import { BackpackIcon, EnterIcon } from "@radix-ui/react-icons";
 import Money from "./Money";
 import { useRouter } from "next/navigation";
+import usePreviewModal from "@/hooks/usePreviewModal";
 
 interface ProductCardProps {
   item: Product;
@@ -14,11 +15,19 @@ interface ProductCardProps {
 
 const ProductCard: FC<ProductCardProps> = ({ item }) => {
   const router = useRouter();
+  const previewModal = usePreviewModal();
   const handleOpenProduct = () => {
     router.push(`/product/${item.id}`);
   };
+  const handlePreview: MouseEventHandler<HTMLButtonElement> = (e) => {
+    e.stopPropagation();
+    previewModal.onOpen(item);
+  };
   return (
-    <div className="bg-white group cursor-pointer rounded-xl border p-3 space-y-4 ">
+    <div
+      onClick={handleOpenProduct}
+      className="bg-white group cursor-pointer rounded-xl border p-3 space-y-4 "
+    >
       <div className="aspect-square rounded-xl bg-gray-100 relative">
         <Image
           src={item?.images?.[0]?.url}
@@ -30,7 +39,7 @@ const ProductCard: FC<ProductCardProps> = ({ item }) => {
         <div className="opacity-0 group-hover:opacity-100 transition absolute w-full px-6 bottom-5">
           <div className="flex gap-x-6 justify-center">
             <ButtonIcon
-              onClick={handleOpenProduct}
+              onClick={handlePreview}
               icon={<EnterIcon />}
             ></ButtonIcon>
             <ButtonIcon icon={<BackpackIcon />}></ButtonIcon>

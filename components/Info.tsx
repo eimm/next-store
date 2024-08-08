@@ -13,9 +13,9 @@ const Info: FC<InfoProps> = ({ data }) => {
     <div>
       <h1 className="text-3xl font-light text-slate-900">{data?.name}</h1>
       <div className="mt-3 flex items-end justify-between">
-        <p className="text-2xl text-slate-800">
+        <div className="text-2xl text-slate-800">
           <Money value={data?.price} />
-        </p>
+        </div>
       </div>
       <hr className="my-4" />
       <div className="flex flex-col gap-y-6">
