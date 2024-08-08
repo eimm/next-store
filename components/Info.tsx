@@ -1,14 +1,19 @@
+"use client";
+
 import { Product } from "@/models";
 import React, { FC } from "react";
 import Money from "./ui/Money";
 import Button from "./ui/Button";
 import { BackpackIcon } from "@radix-ui/react-icons";
+import useCart from "@/hooks/useCart";
 
 interface InfoProps {
   data: Product;
 }
 
 const Info: FC<InfoProps> = ({ data }) => {
+  const add = useCart((state) => state.add);
+
   return (
     <div>
       <h1 className="text-3xl font-light text-slate-900">{data?.name}</h1>
@@ -32,7 +37,12 @@ const Info: FC<InfoProps> = ({ data }) => {
         </div>
       </div>
       <div className="mt-10 flex items-center gap-x-3">
-        <Button className="flex items-center gap-x-2 bg-slate-600">
+        <Button
+          onClick={() => {
+            add(data);
+          }}
+          className="flex items-center gap-x-2 bg-slate-600"
+        >
           Add To Cart
           <BackpackIcon />
         </Button>

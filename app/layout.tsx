@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import { Quicksand } from "next/font/google";
-import "./globals.css";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import ModalProvider from "@/components/ModalProvider";
+import { Toast } from "@/components/Toast";
+import "./globals.css";
 
 const font = Quicksand({ subsets: ["latin"] });
 
@@ -20,6 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={font.className}>
+        <Toast />
         <ModalProvider />
         <Navbar />
         {children}

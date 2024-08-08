@@ -8,6 +8,7 @@ export const billboardsUrl = getPathUrl("billboards");
 export const productsUrl = getPathUrl("products");
 export const variantsUrl = getPathUrl("variants");
 export const coloursUrl = getPathUrl("colours");
+export const checkoutUrl = getPathUrl("checkout");
 
 export const getBillboardUrl = getUrlWithID(billboardsUrl);
 export const getCategoryUrl = getUrlWithID(categoriesUrl);

@@ -8,6 +8,7 @@ import { BackpackIcon, EnterIcon } from "@radix-ui/react-icons";
 import Money from "./Money";
 import { useRouter } from "next/navigation";
 import usePreviewModal from "@/hooks/usePreviewModal";
+import useCart from "@/hooks/useCart";
 
 interface ProductCardProps {
   item: Product;
@@ -16,12 +17,17 @@ interface ProductCardProps {
 const ProductCard: FC<ProductCardProps> = ({ item }) => {
   const router = useRouter();
   const previewModal = usePreviewModal();
+  const cart = useCart();
   const handleOpenProduct = () => {
     router.push(`/product/${item.id}`);
   };
   const handlePreview: MouseEventHandler<HTMLButtonElement> = (e) => {
     e.stopPropagation();
     previewModal.onOpen(item);
+  };
+  const handleCart: MouseEventHandler<HTMLButtonElement> = (e) => {
+    e.stopPropagation();
+    cart.add(item);
   };
   return (
     <div
@@ -42,7 +48,10 @@ const ProductCard: FC<ProductCardProps> = ({ item }) => {
               onClick={handlePreview}
               icon={<EnterIcon />}
             ></ButtonIcon>
-            <ButtonIcon icon={<BackpackIcon />}></ButtonIcon>
+            <ButtonIcon
+              onClick={handleCart}
+              icon={<BackpackIcon />}
+            ></ButtonIcon>
           </div>
         </div>
       </div>
