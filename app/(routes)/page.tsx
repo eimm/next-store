@@ -5,6 +5,8 @@ import { getBillboard } from "@/actions/Billboards";
 import { getProducts } from "@/actions/Products";
 import Products from "@/components/Products";
 
+export const revalidate = 60;
+
 const HomePage: FC = async () => {
   const billboard = await getBillboard("de973623-c232-4c60-9045-4afae41810ec");
   const products = await getProducts({ isFeatured: true });

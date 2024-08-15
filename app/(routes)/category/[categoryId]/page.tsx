@@ -10,6 +10,8 @@ import Empty from "@/components/ui/Empty";
 import ProductCard from "@/components/ui/ProductCard";
 import MobileFilters from "./MobileFilters";
 
+export const revalidate = 60;
+
 interface pageProps {
   params: { categoryId: string };
   searchParams: {

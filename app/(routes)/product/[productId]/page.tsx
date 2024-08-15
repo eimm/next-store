@@ -6,6 +6,8 @@ import Container from "@/components/ui/Container";
 
 import React, { FC } from "react";
 
+export const revalidate = 0;
+
 interface pageProps {
   params: { productId: string };
 }
