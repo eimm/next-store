@@ -14,6 +14,7 @@ const Summary: FC<SummaryProps> = ({}) => {
   const searchParams = useSearchParams();
   const items = useCart((state) => state.items);
   const empty = useCart((state) => state.empty);
+  const isDisabled = !items.length;
 
   const total = items.reduce((acc, i) => acc + Number(i.price), 0);
   const handleCheckout = async () => {
@@ -40,7 +41,11 @@ const Summary: FC<SummaryProps> = ({}) => {
           <Money value={total} />
         </div>
       </div>
-      <Button onClick={handleCheckout} className="w-full mt-6">
+      <Button
+        disabled={isDisabled}
+        onClick={handleCheckout}
+        className="w-full mt-6"
+      >
         Checkout
       </Button>
     </div>
