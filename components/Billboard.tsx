@@ -1,6 +1,6 @@
-import { Billboard as Type } from "@/models";
-
 import React, { FC } from "react";
+
+import { Billboard as Type } from "@/models";
 
 interface BillboardProps {
   data: Type;

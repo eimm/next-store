@@ -1,9 +1,9 @@
 import React, { FC } from "react";
-import { cn } from "@/lib/utils";
-import Image from "next/image";
 import { Tab } from "@headlessui/react";
+import Image from "next/image";
+
+import { cn } from "@/lib/utils";
 import { Image as ImageType } from "@/models";
-import { relative } from "path";
 
 interface GalleryTabProps {
   image: ImageType;

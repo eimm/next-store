@@ -1,11 +1,13 @@
 "use client";
 
 import React, { FC } from "react";
-import Button from "@/components/ui/Button";
 import { BackpackIcon } from "@radix-ui/react-icons";
-import { withEnsureClient } from "./HOCs/withEnsureClient";
-import useCart from "@/hooks/useCart";
 import { useRouter } from "next/navigation";
+
+import Button from "@/components/ui/Button";
+import useCart from "@/hooks/useCart";
+
+import { withEnsureClient } from "./HOCs/withEnsureClient";
 
 interface NavbatActionsProps {}
 

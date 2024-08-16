@@ -1,11 +1,13 @@
 "use client";
 
-import Button from "@/components/ui/Button";
-import { Colour, Variant } from "@/models";
+import React, { FC, useState } from "react";
 import { Dialog, DialogBackdrop, DialogPanel } from "@headlessui/react";
 import { Cross1Icon, PlusIcon } from "@radix-ui/react-icons";
+
+import Button from "@/components/ui/Button";
 import ButtonIcon from "@/components/ui/ButtonIcon";
-import React, { FC, useState } from "react";
+import { Colour, Variant } from "@/models";
+
 import Filter from "./Filter";
 
 interface MobileFiltersProps {

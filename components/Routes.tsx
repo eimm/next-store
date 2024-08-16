@@ -1,9 +1,10 @@
 "use client";
-import { cn } from "@/lib/utils";
-import { Category } from "@/models";
+import React, { FC } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import React, { FC } from "react";
+
+import { cn } from "@/lib/utils";
+import { Category } from "@/models";
 
 interface RoutesProps {
   data: Category[];

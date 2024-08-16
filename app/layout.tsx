@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
 import { Quicksand } from "next/font/google";
+
 import Footer from "@/components/Footer";
-import Navbar from "@/components/Navbar";
 import ModalProvider from "@/components/ModalProvider";
+import Navbar from "@/components/Navbar";
 import { Toast } from "@/components/Toast";
+
 import "./globals.css";
 
 const font = Quicksand({ subsets: ["latin"] });

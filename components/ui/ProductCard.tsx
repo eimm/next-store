@@ -1,14 +1,16 @@
 "use client";
 
-import { Product } from "@/models";
-import Image from "next/image";
 import React, { FC, MouseEventHandler } from "react";
-import ButtonIcon from "./ButtonIcon";
 import { BackpackIcon, EnterIcon } from "@radix-ui/react-icons";
-import Money from "./Money";
+import Image from "next/image";
 import { useRouter } from "next/navigation";
-import usePreviewModal from "@/hooks/usePreviewModal";
+
 import useCart from "@/hooks/useCart";
+import usePreviewModal from "@/hooks/usePreviewModal";
+import { Product } from "@/models";
+
+import ButtonIcon from "./ButtonIcon";
+import Money from "./Money";
 
 interface ProductCardProps {
   item: Product;

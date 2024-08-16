@@ -1,5 +1,7 @@
-import { Product } from "@/models";
 import React, { FC } from "react";
+
+import { Product } from "@/models";
+
 import Empty from "./ui/Empty";
 import ProductCard from "./ui/ProductCard";
 

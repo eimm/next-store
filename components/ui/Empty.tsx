@@ -1,5 +1,5 @@
-import { EyeNoneIcon } from "@radix-ui/react-icons";
 import React, { FC } from "react";
+import { EyeNoneIcon } from "@radix-ui/react-icons";
 
 const Empty: FC<{ message?: string }> = ({
   message = "This list is empty.",

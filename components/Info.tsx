@@ -1,11 +1,13 @@
 "use client";
 
-import { Product } from "@/models";
 import React, { FC } from "react";
-import Money from "./ui/Money";
-import Button from "./ui/Button";
 import { BackpackIcon } from "@radix-ui/react-icons";
+
 import useCart from "@/hooks/useCart";
+import { Product } from "@/models";
+
+import Button from "./ui/Button";
+import Money from "./ui/Money";
 
 interface InfoProps {
   data: Product;

@@ -1,10 +1,11 @@
 "use client";
 
-import Image from "next/image";
 import React, { FC } from "react";
 import { TabGroup, TabList, TabPanel, TabPanels } from "@headlessui/react";
+import Image from "next/image";
 
 import { Image as ImageType } from "@/models";
+
 import GalleryTab from "./GalleryTab";
 
 interface indexProps {

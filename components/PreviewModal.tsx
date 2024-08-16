@@ -1,12 +1,13 @@
 "use client";
 
+import React, { FC } from "react";
+
 import usePreviewModal from "@/hooks/usePreviewModal";
 
-import React, { FC } from "react";
+import { withEnsureClient } from "./HOCs/withEnsureClient";
 import Modal from "./ui/Modal";
 import Gallery from "./Gallery";
 import Info from "./Info";
-import { withEnsureClient } from "./HOCs/withEnsureClient";
 
 interface PreviewModalProps {}
 

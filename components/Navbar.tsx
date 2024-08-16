@@ -1,8 +1,10 @@
 import Link from "next/link";
-import Container from "./ui/Container";
-import Routes from "./Routes";
+
 import { getCategories } from "@/actions/Categories";
+
+import Container from "./ui/Container";
 import NavbarActions from "./NavbarActions";
+import Routes from "./Routes";
 
 const Navbar = async () => {
   const categories = await getCategories();

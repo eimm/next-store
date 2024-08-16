@@ -1,10 +1,10 @@
-import { getProducts, getProduct } from "@/actions/Products";
+import React, { FC } from "react";
+
+import { getProduct,getProducts } from "@/actions/Products";
 import Gallery from "@/components/Gallery";
 import Info from "@/components/Info";
 import Products from "@/components/Products";
 import Container from "@/components/ui/Container";
-
-import React, { FC } from "react";
 
 export const revalidate = 0;
 

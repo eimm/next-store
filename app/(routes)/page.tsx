@@ -1,9 +1,10 @@
 import React, { FC } from "react";
-import Container from "@/components/ui/Container";
-import Billboard from "@/components/Billboard";
+
 import { getBillboard } from "@/actions/Billboards";
 import { getProducts } from "@/actions/Products";
+import Billboard from "@/components/Billboard";
 import Products from "@/components/Products";
+import Container from "@/components/ui/Container";
 
 export const revalidate = 60;
 

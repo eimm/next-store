@@ -1,3 +1,4 @@
+import React, { FC, Fragment } from "react";
 import {
   Dialog,
   DialogBackdrop,
@@ -5,9 +6,9 @@ import {
   Transition,
   TransitionChild,
 } from "@headlessui/react";
-import React, { FC, Fragment } from "react";
-import ButtonIcon from "./ButtonIcon";
 import { Cross1Icon } from "@radix-ui/react-icons";
+
+import ButtonIcon from "./ButtonIcon";
 
 interface ModalProps {
   isOpen: boolean;

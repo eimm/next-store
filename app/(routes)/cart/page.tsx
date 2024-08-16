@@ -1,6 +1,7 @@
+import React, { FC } from "react";
+
 import Container from "@/components/ui/Container";
 
-import React, { FC } from "react";
 import Cart from "./Cart";
 
 interface pageProps {}

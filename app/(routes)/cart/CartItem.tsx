@@ -1,11 +1,12 @@
 "use client";
-import { Product } from "@/models";
 import React, { FC } from "react";
+import { Cross1Icon } from "@radix-ui/react-icons";
 import Image from "next/image";
+
+import ButtonIcon from "@/components/ui/ButtonIcon";
 import Money from "@/components/ui/Money";
 import useCart from "@/hooks/useCart";
-import ButtonIcon from "@/components/ui/ButtonIcon";
-import { Cross1Icon } from "@radix-ui/react-icons";
+import { Product } from "@/models";
 
 interface CartItemProps {
   item: Product;

@@ -1,11 +1,12 @@
 "use client";
 
+import React, { FC } from "react";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import queryString from "query-string";
+
 import Button from "@/components/ui/Button";
 import { cn } from "@/lib/utils";
 import { Colour, Variant } from "@/models";
-import { usePathname, useRouter, useSearchParams } from "next/navigation";
-import queryString from "query-string";
-import React, { FC } from "react";
 
 interface FilterProps {
   data: (Variant | Colour)[];
