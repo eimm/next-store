@@ -1,16 +1,16 @@
-import React, { FC } from "react";
+import React, { FC } from 'react';
 
-import { getCategory } from "@/actions/Categories";
-import { getColours } from "@/actions/Colours";
-import { getProducts } from "@/actions/Products";
-import { getVariants } from "@/actions/Variants";
-import Billboard from "@/components/Billboard";
-import Container from "@/components/ui/Container";
-import Empty from "@/components/ui/Empty";
-import ProductCard from "@/components/ui/ProductCard";
+import { getCategory } from '@/actions/Categories';
+import { getColours } from '@/actions/Colours';
+import { getProducts } from '@/actions/Products';
+import { getVariants } from '@/actions/Variants';
+import Billboard from '@/components/Billboard';
+import Container from '@/components/ui/Container';
+import Empty from '@/components/ui/Empty';
+import ProductCard from '@/components/ui/ProductCard';
 
-import Filter from "./Filter";
-import MobileFilters from "./MobileFilters";
+import Filter from './Filter';
+import MobileFilters from './MobileFilters';
 
 export const revalidate = 60;
 

@@ -1,10 +1,10 @@
-import React, { FC } from "react";
+import React, { FC } from 'react';
 
 interface FooterProps {}
 
 const Footer: FC<FooterProps> = ({}) => {
   return (
-    <footer className="bg-white border-t">
+    <footer className="bg-white border-t" id="footer">
       <div className="mx-auto py-10">
         <p className="text-center text-xs text-black">&copy; FOOOOTER</p>
       </div>

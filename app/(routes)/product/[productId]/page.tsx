@@ -1,10 +1,10 @@
-import React, { FC } from "react";
+import React, { FC } from 'react';
 
-import { getProduct,getProducts } from "@/actions/Products";
-import Gallery from "@/components/Gallery";
-import Info from "@/components/Info";
-import Products from "@/components/Products";
-import Container from "@/components/ui/Container";
+import { getProduct, getProducts } from '@/actions/Products';
+import Gallery from '@/components/Gallery';
+import Info from '@/components/Info';
+import Products from '@/components/Products';
+import Container from '@/components/ui/Container';
 
 export const revalidate = 0;
 
@@ -28,7 +28,11 @@ const ProductPage: FC<pageProps> = async ({ params }) => {
             </div>
           </div>
           <hr className="my-10"></hr>
-          <Products items={suggestedProducts} title="Simular Products" />
+          <Products
+            items={suggestedProducts}
+            title="Simular Products"
+            variant="aux"
+          />
         </div>
       </Container>
     </div>

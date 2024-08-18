@@ -1,6 +1,9 @@
-import React, { FC } from "react";
+'use client';
 
-import { Billboard as Type } from "@/models";
+import React, { FC } from 'react';
+import { ParallaxBanner } from 'react-scroll-parallax';
+
+import { Billboard as Type } from '@/models';
 
 interface BillboardProps {
   data: Type;
@@ -9,16 +12,16 @@ interface BillboardProps {
 const Billboard: FC<BillboardProps> = ({ data }) => {
   return (
     <div className="p-4 sm:p-6 lg:p-8 rounded-xl overflow-hidden">
-      <div
-        className="rounded-xl relative aspect-[2/1] md:aspect-[5/1] overflow-hidden bg-cover"
-        style={{ backgroundImage: `url(${data?.imageUrl})` }}
+      <ParallaxBanner
+        layers={[{ image: data?.imageUrl, speed: 20 }]}
+        className="aspect-square md:aspect-[3/1] rounded-xl"
       >
-        <div className="h-full w-full flex flex-col justify-center items-center text-center gap-y-8">
-          <div className="font-semibold text-2xl sm:text-3xl lg:text-4xl sm:max-w-xl max-w-xs">
+        <div className="absolute inset-0 flex items-center justify-center">
+          <h1 className="font-semibold text-2xl sm:text-3xl lg:text-4xl sm:max-w-xl max-w-xs">
             {data?.label}
-          </div>
+          </h1>
         </div>
-      </div>
+      </ParallaxBanner>
     </div>
   );
 };
